@@ -12,6 +12,9 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1),
     width: 200,
   },
+  inputLabel: {
+    left: 24,
+  },
   dense: {
     marginTop: 19,
   },
@@ -37,6 +40,11 @@ const TextFields = () => {
       value={name}
       onChange={handleChange()}
       margin="normal"
+      InputLabelProps={{
+        classes:{
+          root: classes.inputLabel
+        }
+      }}
     />
   )
 }
